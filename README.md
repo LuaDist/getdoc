@@ -1,7 +1,7 @@
 lua-getdoc
 ===========
 
-Parsing and analysing comments and saving to *.lua files.
+Parsing and analysing function comments and saving them to *.lua files.
 TODO... write readme...
 
 Dependencies:
