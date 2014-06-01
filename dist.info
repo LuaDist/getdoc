@@ -1,0 +1,14 @@
+--- This dist file is part of LuaDist project
+
+name = "lua-getdoc"
+version = "0.1"
+
+desc = "lua-getdoc is a Lua comment parser"
+author = "Peter Mendel, Peter Kapec"
+license = "MIT"
+url = "TODO"
+maintainer = "Peter Kapec"
+
+depends = {
+	"lua ~> 5.1",
+}
