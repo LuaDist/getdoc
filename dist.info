@@ -3,10 +3,9 @@
 name = "lua-getdoc"
 version = "0.1"
 
-desc = "lua-getdoc is a Lua comment parser"
+desc = "lua-getdoc extracts Lua comment and stores them in requirable tables"
 author = "Peter Mendel, Peter Kapec"
 license = "MIT"
-url = "TODO"
 maintainer = "Peter Kapec"
 
 depends = {

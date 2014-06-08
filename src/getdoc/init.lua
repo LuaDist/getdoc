@@ -10,7 +10,7 @@ local address
 
 module ('getdoc')
 
--- Function creates table of parsed comments of lua files from given path
+--- Function creates table of parsed comments of lua files from given path
 -- @name createTableStructure
 -- @param path string path to analyze *.lua files
 -- @return root created table
@@ -40,7 +40,7 @@ function createTableStructure(path)
     return root
 end
 
--- Function creates file structure as it is in given path
+--- Function creates file structure as it is in given path
 -- @name createFileStructure
 -- @param path string path
 -- @param address path of /_getdoc directory, can be nil
@@ -105,7 +105,7 @@ function createFileStructure(path, address)
 	    end
 end
 
--- Function to execute getdoc require statement and return table of required element
+--- Function to execute getdoc require statement and return table of required element
 -- @name getdocRequire
 -- @param req require statement; syntax directory.file.function.element
 -- @return f required element table
@@ -137,16 +137,16 @@ function getdocRequire(req, getdoc_path)
 	local i = 1
 
 	while i <= table.getn(path) do
-		
+
 		if gdu.searchFile(final_path .. "/" .. path[i]) == "directory" then
-			final_path = final_path .. path[i] .. "/" 
+			final_path = final_path .. path[i] .. "/"
 			final_req = final_req .. path[i] .. "."
 		elseif (gdu.searchFile(final_path .. "/" .. path[i] ..".lua")) == "file" then
 			final_req = final_req .. path[i]
 			final_path = final_path .. "/" .. path[i] ..".lua"
-			
+
 			package.path = package.path .. ";" .. final_path
-			
+
 			f = require(final_req)
 			break
 		else

@@ -9,7 +9,7 @@ cmake_minimum_required ( VERSION 2.6 )
 include ( dist.cmake )
 
 # Install all files and documentation
+install_lua_executable ( luagetdoc src/luagetdoc.lua )
 install ( DIRECTORY src/getdoc DESTINATION ${INSTALL_LMOD} )
-#install_data ( README COPYRIGHT)
-#install_doc ( doc/ )
-install_test( tests/)
+install_data ( README.md )
+
